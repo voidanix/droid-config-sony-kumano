@@ -1,10 +1,10 @@
-Description: Pattern with packages for mermaid HW Adaptation
-Name: jolla-hw-adaptation-mermaid
+Description: Pattern with packages for griffin HW Adaptation
+Name: jolla-hw-adaptation-griffin
 Requires:
-- droid-hal-mermaid
-- droid-hal-mermaid-img-boot
-- droid-hal-mermaid-img-recovery
-- droid-hal-mermaid-tools
+- droid-hal-griffin
+- droid-hal-griffin-img-boot
+- droid-hal-griffin-img-recovery
+- droid-hal-griffin-tools
 
 # Hybris packages
 - libhybris-libEGL
@@ -71,5 +71,5 @@ Requires:
 # For GPS
 - geoclue-provider-hybris
 
-Summary: Jolla HW Adaptation mermaid
+Summary: Jolla HW Adaptation griffin
 

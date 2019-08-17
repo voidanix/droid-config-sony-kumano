@@ -1,0 +1,29 @@
+Description: Pattern with packages for j9110 configurations
+Name: jolla-configuration-j9110
+Requires:
+- pattern:jolla-hw-adaptation-griffin
+
+- droid-config-j9110-sailfish
+- droid-config-j9110-pulseaudio-settings
+- droid-config-j9110-policy-settings
+- droid-config-j9110-preinit-plugin
+- droid-config-j9110-flashing
+- droid-config-j9110-bluez5
+- droid-hal-version-j9110
+
+- patterns-sailfish-applications
+- patterns-sailfish-ui
+- patterns-sailfish-cellular-apps
+
+- sailfish-content-graphics-z@ICON_RES@
+
+- jolla-settings-networking-multisim
+- jolla-settings-system-nfc
+- jolla-settings-system-flashlight
+
+- geoclue-provider-mlsdb
+- csd
+- mapplauncherd-booster-silica-qt5-media
+
+Summary: Jolla Configuration j9110
+
