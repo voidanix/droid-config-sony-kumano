@@ -3,13 +3,14 @@ CPUCHECK_STRING="Qualcomm Technologies, Inc TRINKET$"
 # Because of flash-partition checks, 1 needs to be defined
 # Others can go with partition numbers
 PART_1="boot_a"
-PART_43="boot_b"
-PART_79="dtbo_a"
-PART_80="dtbo_b"
+PART_41="dtbo_a"
+PART_48="boot_b"
+PART_51="dtbo_b"
 
-PART_REAL_1="mmcblk0p42"
-PART_REAL_43="mmcblk0p43"
-PART_REAL_79="mmcblk0p79"
-PART_REAL_80="mmcblk0p80"
 
-PART_I="1 43 79 80"
+PART_REAL_1="sda38"
+PART_REAL_41="sda41"
+PART_REAL_48="sda48"
+PART_REAL_51="sda51"
+
+PART_I="1 41 48 51"
