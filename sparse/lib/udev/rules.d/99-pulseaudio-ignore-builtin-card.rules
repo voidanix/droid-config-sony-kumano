@@ -1,1 +1,1 @@
-KERNEL=="card0", SUBSYSTEM=="sound", ATTR{id}=="trinketidpsndca", ENV{PULSE_IGNORE}="1"
+KERNEL=="card0", SUBSYSTEM=="sound", ATTR{id}=="sm8150tavilsndc", ENV{PULSE_IGNORE}="1"
