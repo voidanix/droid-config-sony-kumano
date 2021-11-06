@@ -26,14 +26,6 @@ Requires: jolla-settings-networking-multisim
 Requires: geoclue-provider-mlsdb
 Requires: mapplauncherd-booster-silica-qt5-media
 
-Requires: patterns-sailfish-consumer-generic
-Requires: patterns-sailfish-store-applications
-Requires: patterns-sailfish-rnd
-# dev-tools pattern will be fixed in the next release
-# for now we'll use its 'exploded' version:
-Requires: zypper
-
-
 %description -n patterns-sailfish-device-configuration-j9110
 Pattern with packages for j9110 configurations
 
