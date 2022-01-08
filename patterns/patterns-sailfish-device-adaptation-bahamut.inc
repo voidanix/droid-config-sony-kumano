@@ -60,6 +60,10 @@ Requires: rfkill
 
 # enable fingerprint reader
 Requires: sailfish-devicelock-fpd
+Requires: sailfish-fpd-community
+
+# for fpd-community as we are using keymaster 4
+Requires: droid-fake-crypt
 
 # Enable home encryption
 Requires: sailfish-device-encryption
