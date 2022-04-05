@@ -1,4 +1,4 @@
-CPUCHECK_STRING="Qualcomm Technologies, Inc TRINKET$"
+CPUCHECK_STRING="Qualcomm Technologies, Inc MSMNILE"
 
 # Because of flash-partition checks, 1 needs to be defined
 # Others can go with partition numbers
@@ -6,7 +6,6 @@ PART_1="boot_a"
 PART_41="dtbo_a"
 PART_48="boot_b"
 PART_51="dtbo_b"
-
 
 PART_REAL_1="sda38"
 PART_REAL_41="sda41"
