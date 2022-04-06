@@ -5,7 +5,7 @@
 %define provides_own_board_mapping 1
 %define out_of_image_files 1
 
-%define android_version_major 10
+%define android_version_major 11
 
 # Device-specific ofono configuration
 Provides: ofono-configs
