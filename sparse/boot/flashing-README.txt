@@ -1,17 +1,17 @@
-= SAILFISH X FOR SONY XPERIA™ 10 II FLASHING GUIDE =
+= SAILFISH X FOR SONY XPERIA™ 1/5 FLASHING GUIDE =
 
 = FOR LINUX, WINDOWS AND OS X =
 
-= STEP 1: GETTING AN XPERIA™ 10 II =
+= STEP 1: GETTING AN XPERIA™ 1 or 5 =
 
-Get an Xperia™ 10 II. To be able to replace the Sony Android
+Get an Xperia™ 1 or 5. To be able to replace the Sony Android
 system with Sailfish X, you will need to be able to unlock the bootloader of
 your device so that it can be flashed with a new operating system. This process
 is supported by Sony as part of their Open Devices programme:
 
 https://developer.sony.com/develop/open-devices/
 
-The best way to get an unlockable device is to buy is a brand new Xperia™ 10 II
+The best way to get an unlockable device is to buy is a brand new Xperia™ 1/5
 in a sales box. If you are tempted to buy second-hand please be aware that there
 are some variants for which the bootloader cannot be unlocked: for example
 devices that have at some point been SIM locked, even if they have subsequently
@@ -36,7 +36,7 @@ Make sure that the system language of your Xperia™ device is set to English
 before you continue.
 
 Go to https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader/
-website and select the model of your device Xperia™ 10 II.
+website and select the model of your device Xperia™ 1/5.
 You should see additional instructions to prepare your device for unlocking:
 
 * Type the IMEI, accept the terms & conditions and press submit.
