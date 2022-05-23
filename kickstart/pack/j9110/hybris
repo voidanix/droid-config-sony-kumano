@@ -20,13 +20,6 @@ fi
 
 RELEASENAME=${NAME// /_}-${SAILFISH_CUSTOMER// /_}${SAILFISH_CUSTOMER:+-}${EXTRA_NAME// /_}$RND_FLAVOUR${RND_FLAVOUR:+-}$VERSION_ID$DEVICE_ID
 
-# Remove /opt mounting from fstab, systemd will handle it
-mkdir root
-mount -o loop root.img root
-sed -i '/\/opt/d' root/etc/fstab
-umount root
-rm -rf root
-
 IMGSECTORS=0
 IMGBLOCKS=0
 IMGSIZE=0
@@ -100,36 +93,7 @@ dd if=home.img bs=$BLOCKSIZE count=$HOMEBLOCKS of=/dev/sailfish/home
 
 /usr/sbin/vgchange -a n sailfish
 
-pigz -7 root.img && md5sum -b root.img.gz > root.img.gz.md5&
-pigz -7 home.img && md5sum -b home.img.gz > home.img.gz.md5&
-wait
-
-ROOTSIZE=$(/bin/ls -l root.img.gz | cut -d ' ' -f5)
-HOMESIZE=$(/bin/ls -l home.img.gz | cut -d ' ' -f5)
-
-# Temporary dir for making factory image backups.
-FIMAGE_TEMP=$(mktemp -d -p $(pwd))
-
-# For some reason loop files created by imager don't shrink properly when
-# running resize2fs -M on them. Hence manually growing the loop file here
-# to make the shrinking work once we have the image populated.
-dd if=/dev/zero bs=512 seek=$(/usr/bin/expr \( $ROOTSIZE + $HOMESIZE + 100000000 \) / 512) count=1 of=fimage.img
-/sbin/e2fsck -f -y fimage.img
-/sbin/resize2fs -f fimage.img
-
-mount -o loop fimage.img $FIMAGE_TEMP
-mkdir -p $FIMAGE_TEMP/${RELEASENAME}
-mv root.img.gz* $FIMAGE_TEMP/${RELEASENAME}
-mv home.img.gz* $FIMAGE_TEMP/${RELEASENAME}
-umount $FIMAGE_TEMP
-rmdir $FIMAGE_TEMP
-
-/sbin/e2fsck -f -y fimage.img
-/sbin/resize2fs -f -M fimage.img
-
-# To make the file magic right lets convert to single file sparse image.
-/usr/bin/img2simg fimage.img fimage.img001
-rm fimage.img
+rm home.img root.img
 
 /sbin/losetup -d $LVM_LOOP
 
@@ -139,10 +103,6 @@ mv temp.img sailfish.img
 # To make the file magic right lets convert to single file sparse image.
 /usr/bin/img2simg sailfish.img sailfish.img001
 rm sailfish.img
-
-# To make the file magic right lets convert to single file sparse image.
-/usr/bin/img2simg vendor.img vendor.img001
-rm vendor.img
 
 chmod 755 flash.*
 
